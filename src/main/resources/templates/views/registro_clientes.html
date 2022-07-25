@@ -21,26 +21,26 @@
 						<font color="red">*</font> Correo electr&oacutenico: <input type="email" th:field="*{email}" name="email" id="email" placeholder="email" required>
 					</p>
 					<p>
-						<font color="red">*</font> Direcci&oacuten: <input type="text"  name="address" id="address" placeholder="address-> address" required>
+						<font color="red">*</font> Direcci&oacuten: <input type="text" th:field="*{addressId}" name="addressId" id="addressId" placeholder="address" required>
 					</p>
 					<p>
 						<font color="red">*</font> Pa&iacutes:
 						<select id="selectCountry" name="selectCountry" class="form-control">
-							<option value="-1">country-> country</option>
+							<option value="-1">Selecciona una opci&oacuten</option>
 							<option th:each="country : ${country}" th:value="${country}" th:text="${country}"></option>
 						</select>
 					</p>
 					<p>
 						<font color="red">*</font> Ciudad:
 						<select id="selectCity" name="selectCity" class="form-control">
-							<option value="-1">city-> city</option>
+							<option value="-1">Selecciona una opci&oacuten</option>
 							<option th:each="city : ${city}" th:value="${city}" th:text="${city}"></option>
 						</select>
 					</p>
 					<p>
 						<font color="red">*</font> Sucursal:
 						<select id="selectStore" name="selectStore" class="form-control">
-							<option value="-1">store-> store_id</option>
+							<option value="-1">Selecciona una opci&oacuten</option>
 							<option th:each="store : ${storeId}" th:value="${storeId}" th:text="${storeId}"></option>
 						</select>
 					</p>

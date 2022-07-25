@@ -15,26 +15,14 @@
 						<font color="red">*</font> T&iacutetulo: <input type="text" th:field="*{title}" name="title" id="title" placeholder="title" required>
 					</p>
 					<p>
-						<font color="red">*</font> Idioma: <input type="text"  name="languageName" id="languageName" placeholder="language-> name" required>
+						<font color="red">*</font> A%ntildeo de lanzamiento: <input type="number" th:field="*{releaseYear}" name="releaseYear" id="releaseYear" placeholder="releaseYear" required>
 					</p>
 					<p>
-						<font color="red">*</font> Duraci&oacuten: <input type="text"  name="length" id="length" placeholder="length" required>
+						<font color="red">*</font> Categor&iacutea: <input type="text" th:field="*{category-> name}" name="categoryName" id="categoryName" placeholder="category-> name" required>
 					</p>
 					<hr>
 					<p>
-						<font color="red">*</font> Cantidad a agregar:
-						<select id="amount" name="amount" class="form-control">
-							<option value="-1">inventory-> COUNT(film_id)</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-						</select>
+						<font color="red">*</font> Idioma: <input type="text" th:field="*{language-> name}" name="languageName" id="languageName" placeholder="language-> name" required>
 					</p>
 					<p>
 						<font color="red">*</font> Categor&iacutea:
@@ -43,14 +31,14 @@
 							<option th:each="category : ${categoryName}" th:value="${categoryName}" th:text="${categoryName}"></option>
 						</select>
 					</p>
-					
+
 					<p><font color="red">* Datos obligatorios.</font></p>
 					<p>
-						<button type="submit">Registrar</button> 
+						<button type="submit">Registrar</button>
 					</p>
-	
+
 				</form>
-				
+
 			</div>
 	</div>
 	</div>
