@@ -12,16 +12,16 @@
 				<h1>Registro de Clientes</h1>
 				<form th:object="${Customer}" method="POST" th:action="@{/InsertCustomer}">
 					<p>
-						<font color="red">*</font> Nombre: <input type="text" th:field="*{firstName}" name="firstName" id="firstName" placeholder="Nombre" required>
+						<font color="red">*</font> Nombre: <input type="text" th:field="*{firstName}" name="firstName" id="firstName" placeholder="first_name" required>
 					</p>
 					<p>
-						<font color="red">*</font> Apellido: <input type="text" th:field="*{lastName}" name="lastName" id="lastName" placeholder="Apellido" required>
+						<font color="red">*</font> Apellido: <input type="text" th:field="*{lastName}" name="lastName" id="lastName" placeholder="last_name" required>
 					</p>
 					<p>
-						<font color="red">*</font> Correo electr&oacutenico: <input type="email" th:field="*{email}" name="email" id="email" placeholder="direcci&oacute;n@correo.com" required>
+						<font color="red">*</font> Correo electr&oacutenico: <input type="email" th:field="*{email}" name="email" id="email" placeholder="email" required>
 					</p>
 					<p>
-						<font color="red">*</font> Direcci&oacuten: <input type="text" th:field="*{addressId}" name="addressId" id="addressId" placeholder="Lugar, Ciudad, Pa&iacute;s" required>
+						<font color="red">*</font> Direcci&oacuten: <input type="text" th:field="*{addressId}" name="addressId" id="addressId" placeholder="address + city + country" required>
 					</p>
 					<p>
 					<font color="red">*</font> Sucursal:
