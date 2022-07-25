@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.uabc.entities.CatalogoIndex;
+import com.uabc.entities.Customer;
 import com.uabc.entities.Film;
 
 import com.uabc.repository.FilmRepository;
@@ -47,6 +48,11 @@ public class FilmService implements IFilmService{
 	@Override
 	public List<String> obtenerActores(Integer filmId) {
 		return filmRepository.obtenerActores(filmId);
+	}
+	
+	public Film InsertFilm(Film film) 
+	{
+		return filmRepository.save(film);
 	}
 	
 	

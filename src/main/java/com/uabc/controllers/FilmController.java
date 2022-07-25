@@ -46,10 +46,20 @@ public class FilmController {
 	private InventoryService inventoryService;
 
 	@RequestMapping(value = {"/films"})
-	public String index(Model model) {
+	public String index(Model model, HttpServletRequest request, HttpServletResponse response, Principal principal) {
+		
 		
 		model.addAttribute("Film", new Film());
 		
+		
+		
+		return "views/registro_peliculas";
+	}
+	
+	@RequestMapping(value = {"/InsertFilm"}, method = RequestMethod.POST)
+	public String insert(Film film,Model model, HttpServletRequest request, HttpServletResponse response, Principal principal) 
+	{
+		filmService.InsertFilm(film);
 		return "views/registro_peliculas";
 	}
 	
