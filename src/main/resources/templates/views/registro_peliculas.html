@@ -7,35 +7,33 @@
 		<div th:replace="layout/header :: menu"></div>
 		<div id="page-content-wrapper" style="width:100%;">
 			<!-- Page content-->
+			<div class="container-fluid" style="margin-top:15px;margin-bottom:10px;text-align:center">
 
 				<h1>Registro de Pel&iacuteculas</h1>
-				<form th:object="${Film}" method="POST">
+				<form th:object="${Film}" method="POST" th:action="@{/InsertFilm}">
 					<p>
-						<font color="red">*</font> Nombre: <input type="text" th:field="*{firstName}" name="firstName" id="firstName" placeholder="Nombre" required>
+						<font color="red">*</font> T&iacutetulo: <input type="text" th:field="*{title}" name="title" id="title" placeholder="title" required>
 					</p>
 					<p>
-						<font color="red">*</font> Apellido: <input type="text" th:field="*{lastName}" name="lastName" id="lastName" placeholder="Apellido" required>
+						<font color="red">*</font> A%ntildeo de lanzamiento: <input type="number" th:field="*{releaseYear}" name="releaseYear" id="releaseYear" placeholder="releaseYear" required>    
 					</p>
 					<p>
-						<font color="red">*</font> Correo electr&oacutenico: <input type="email" th:field="*{email}" name="email" id="email" placeholder="direcci&oacute;n@correo.com" required>    
+						<font color="red">*</font> Categor&iacutea: <input type="text" th:field="*{category-> name}" name="categoryName" id="categoryName" placeholder="category-> name" required>
 					</p>
 					<p>
-						<font color="red">*</font> Direcci&oacuten: <input type="text" th:field="*{addressId}" name="addressId" id="addressId" placeholder="Lugar, Ciudad, Pa&iacute;s" required>
+						<font color="red">*</font> Idioma: <input type="text" th:field="*{language-> name}" name="languageName" id="languageName" placeholder="language-> name" required>
 					</p>
 					<p>
-					<font color="red">*</font> Sucursal:
-					<select id="selectStore" name="selectStore" class="form-control">
-						<option value="-1">Selecciona una opci&oacuten</option>
-						<option th:each="store : ${storeId}" th:value="${storeId}" th:text="${storeId}"></option>
-					</select>
+						<font color="red">*</font> Duraci&oacuten: <input type="text" th:field="*{length}" name="length" id="length" placeholder="length" required>
 					</p>
 					<p><font color="red">* Datos obligatorios.</font></p>
 					<p>
 						<button type="submit">Registrar</button> 
 					</p>
 				</form>
-
-		</div>
+				
+			</div>
+	</div>
 	</div>
 	<div th:replace="layout/header :: footer"></div>
 	<div th:replace="layout/header :: scripts"></div>
