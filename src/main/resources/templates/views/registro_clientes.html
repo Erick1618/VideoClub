@@ -25,9 +25,8 @@
 					</p>
 					<p>
 					<font color="red">*</font> Sucursal:
-					<select id="selectStore" name="selectStore" class="form-control">
-						<option value="-1">Selecciona una opci&oacuten</option>
-						<option th:each="store : ${storeId}" th:value="${storeId}" th:text="${storeId}"></option>
+					<select class="form-control">
+						<option th:each="CountryDDL : ${CountryDDL}" th:value="${CountryDDL.id}" th:text="${CountryDDL.country}"></option>
 					</select>
 					</p>
 					<p><font color="red">* Datos obligatorios.</font></p>
