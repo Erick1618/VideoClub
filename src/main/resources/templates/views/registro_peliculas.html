@@ -7,6 +7,7 @@
 		<div th:replace="layout/header :: menu"></div>
 		<div id="page-content-wrapper" style="width:100%;">
 			<!-- Page content-->
+			<div class="container-fluid" style="margin-top:15px;margin-bottom:10px;text-align:center">
 
 				<h1>Registro de Pel&iacuteculas</h1>
 				<form th:object="${Film}" method="POST" th:action="@{/InsertFilm}">
@@ -30,8 +31,9 @@
 						<button type="submit">Registrar</button> 
 					</p>
 				</form>
-
-		</div>
+				
+			</div>
+	</div>
 	</div>
 	<div th:replace="layout/header :: footer"></div>
 	<div th:replace="layout/header :: scripts"></div>
