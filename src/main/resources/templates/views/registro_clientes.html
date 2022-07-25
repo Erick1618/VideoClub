@@ -25,9 +25,9 @@
 					</p>
 					<p>
 						<font color="red">*</font> Pa&iacutes:
-						<select id="selectCountry" name="selectCountry" class="form-control">
-							<option value="-1">Selecciona una opci&oacuten</option>
-							<option th:each="country : ${country}" th:value="${country}" th:text="${country}"></option>
+						<select  class="form-control">
+							
+							<option th:each="Country : ${Country}" th:value="${Country.countryId}" th:text="${Country.Country}"></option>
 						</select>
 					</p>
 					<p>
