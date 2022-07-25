@@ -24,6 +24,7 @@ import com.uabc.entities.Category;
 import com.uabc.entities.Customer;
 import com.uabc.entities.Film;
 import com.uabc.services.CategoryService;
+import com.uabc.services.CustomerService;
 import com.uabc.services.FilmService;
 import com.uabc.services.InventoryService;
 import com.uabc.services.LanguageService;
