@@ -56,7 +56,13 @@
 	<div th:replace="layout/header :: footer"></div>
 	<div th:replace="layout/header :: scripts"></div>
 	
-	
+	<script type="text/javascript">
+        function obtenerCountry() {
+            var selectedCountry = document.getElementById("selectCountry");
+            var selectedId = selectCountry.options[selectCountry.selectedIndex].value;
+            alert(selectedId);
+        }
+    </script>
 </body>
 
 </html>
