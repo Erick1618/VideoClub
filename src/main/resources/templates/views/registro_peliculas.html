@@ -15,23 +15,30 @@
 						<font color="red">*</font> T&iacutetulo: <input type="text" th:field="*{title}" name="title" id="title" placeholder="title" required>
 					</p>
 					<p>
-						<font color="red">*</font> A%ntildeo de lanzamiento: <input type="number" th:field="*{releaseYear}" name="releaseYear" id="releaseYear" placeholder="releaseYear" required>    
+						<font color="red">*</font> A%ntildeo de lanzamiento: <input type="number" th:field="*{releaseYear}" name="releaseYear" id="releaseYear" placeholder="releaseYear" required>
 					</p>
 					<p>
 						<font color="red">*</font> Categor&iacutea: <input type="text" th:field="*{category-> name}" name="categoryName" id="categoryName" placeholder="category-> name" required>
 					</p>
+					<hr>
 					<p>
 						<font color="red">*</font> Idioma: <input type="text" th:field="*{language-> name}" name="languageName" id="languageName" placeholder="language-> name" required>
 					</p>
 					<p>
-						<font color="red">*</font> Duraci&oacuten: <input type="text" th:field="*{length}" name="length" id="length" placeholder="length" required>
+						<font color="red">*</font> Categor&iacutea:
+						<select id="catogory" name="category" class="form-control">
+							<option value="-1">category-> name</option>
+							<option th:each="category : ${categoryName}" th:value="${categoryName}" th:text="${categoryName}"></option>
+						</select>
 					</p>
+
 					<p><font color="red">* Datos obligatorios.</font></p>
 					<p>
-						<button type="submit">Registrar</button> 
+						<button type="submit">Registrar</button>
 					</p>
+
 				</form>
-				
+
 			</div>
 	</div>
 	</div>

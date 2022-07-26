@@ -25,9 +25,9 @@
 					</p>
 					<p>
 						<font color="red">*</font> Pa&iacutes:
-						<select id="selectCountry" name="selectCountry" class="form-control">
+						<select id="selectCountry" class="form-control">
 							<option value="-1">Selecciona una opci&oacuten</option>
-							<option th:each="country : ${country}" th:value="${country}" th:text="${country}"></option>
+							<option th:each="Country : ${Country}" th:value="${Country.countryId}" th:text="${Country.Country}"></option>
 						</select>
 					</p>
 					<p>
@@ -55,6 +55,14 @@
 	</div>
 	<div th:replace="layout/header :: footer"></div>
 	<div th:replace="layout/header :: scripts"></div>
+	
+	<script type="text/javascript">
+        function obtenerCountry() {
+            var selectedCountry = document.getElementById("selectCountry");
+            var selectedId = selectCountry.options[selectCountry.selectedIndex].value;
+            alert(selectedId);
+        }
+    </script>
 </body>
 
 </html>

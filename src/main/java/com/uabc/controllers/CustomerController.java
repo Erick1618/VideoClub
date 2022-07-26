@@ -64,32 +64,18 @@ public class CustomerController {
 	@RequestMapping(value = {"/customers"})
 	public String index(Model model, HttpServletRequest request, HttpServletResponse response, Principal principal) {
 		
+		List<Country> countries= new ArrayList<Country>();
+		countries = countryService.findAll();
 		
 		
 		model.addAttribute("Customer", new Customer());
-		model.addAttribute("storeId");
+		model.addAttribute("Country", countries);
 		
 		
 		return "views/registro_clientes";
 	}
 	
-	@ModelAttribute("CountryDDL")
-	public List<CountryDDL> getCountries()
-	{	
-		List<Country> countries= new ArrayList<Country>();
-		List<CountryDDL> country = new ArrayList<CountryDDL>();
-		
-		countries = countryService.findAll();
-		
-		for(int i = 0; i< countries.size(); i ++) 
-		{
-			country.add(new CountryDDL(countries.get(i).getCountryId(),countries.get(i).getCountry()));
-		}
-		
-		
-		return country;
-		
-	}
+	
 	
 	@RequestMapping(value = {"/InsertCustomer"}, method = RequestMethod.POST)
 	public String insert(Customer customer,Model model, HttpServletRequest request, HttpServletResponse response, Principal principal) 
